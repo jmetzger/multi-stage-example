@@ -4,9 +4,13 @@
 ## Commands used
 
 ```
-# build 
-docker build . -t multi-stage-example:v1` - Build image
-# use built stuff only 
+# build bis zum target / dort davor stoppen 
 docker build . -t multi-stage-example:v1 --target=builder
+# alles bauen  
+docker build . -t multi-stage-example:v1
 docker run -p 8080 multi-stage-example:v1 -p 8080:8080
 ```
+
+## Reference:
+
+  * https://docs.docker.com/build/building/multi-stage/
